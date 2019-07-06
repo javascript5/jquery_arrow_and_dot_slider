@@ -1,0 +1,43 @@
+.slideWrapper > ul > li:nth-child(1){
+    display: block;
+}
+
+.slideWrapper{
+    width: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.slideWrapper > ul{
+    margin: 0;
+    padding: 0;
+}
+.slideWrapper > ul > li{
+    display: none;
+    background-color: #333333;
+    width: 100%;
+    font-family: Prompt;
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+text-align: center;
+
+color: #FBE16D;
+list-style: none;
+padding: 20px;
+}
+
+
+.prevSlideButton,
+.nextSlideButton{
+position: absolute;
+cursor: pointer;
+}
+
+.prevSlideButton{
+    left: -54px;
+}
+
+.nextSlideButton{
+    right: -94px;
+}
