@@ -14,10 +14,19 @@ $(document).ready(function() {
 
   $(".prevSlideButton").on("click", function() {
     prevSlide();
+    activeDot();
   });
   $(".nextSlideButton").on("click", function() {
     nextSlide();
+    activeDot();
   });
+
+  function activeDot() {
+    $(".dot").removeClass("active_dot");
+    $(".dot")
+      .eq(slideCounter)
+      .addClass("active_dot");
+  }
 
   function prevSlide() {
     slideCounter--;
@@ -47,8 +56,9 @@ $(document).ready(function() {
     $(this).on("click", function() {
       var itemNumber = $(this).attr("item");
       slideCounter = itemNumber;
-      displaySlideItem(itemNumber);
+      displaySlideItem(slideCounter);
+      jQuery(".dot").removeClass("active_dot");
+      jQuery(this).addClass("active_dot");
     });
   });
-
 });
